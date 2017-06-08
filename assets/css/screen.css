@@ -2257,14 +2257,19 @@ body.page-template .post-title {
 
 body:not(.post-template) .post {
     position: relative;
+    padding: 10px 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border: #EBF2F6 1px solid;
+    border-radius: 5px;
 }
 body:not(.post-template) .post-image {
-    height: 90%;
+    height: 100%;
     width: 30%;
     top: 0;
     left: 0;
     overflow: hidden;
     position: absolute;
+    border-radius: 5px 0 0 5px;
 }
 body:not(.post-template) .post-image img {
     height: 150%;
@@ -2286,6 +2291,7 @@ body:not(.post-template) .post-image::after {
 body:not(.post-template) .post:nth-child(odd) .post-image {
     left: auto;
     right: 0;
+    border-radius: 0 5px 5px 0;
 }
 body:not(.post-template) .post:nth-child(odd) .post-image::after {
     right: auto;
@@ -2296,7 +2302,7 @@ body:not(.post-template) .post:nth-child(odd) .post-image::after {
 body:not(.post-template) .post-header,
 body:not(.post-template) .post-excerpt,
 body:not(.post-template) .post-meta {
-    margin-right: 0;
+    margin-right: 20px;
     margin-left: 30%;
 }
 
@@ -2304,35 +2310,37 @@ body:not(.post-template) .post:nth-child(odd) .post-header,
 body:not(.post-template) .post:nth-child(odd) .post-excerpt,
 body:not(.post-template) .post:nth-child(odd) .post-meta {
     margin-right: 30%;
-    margin-left: 0;
+    margin-left: 20px;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
     body:not(.post-template) .post-image {
-        height: 45px;
+        height: 100px;
         width: 100%;
+        border-radius: 5px 5px 0 0;
     }
     body:not(.post-template) .post-image img {
         height: auto;
         width: 100%;
     }
     body:not(.post-template) .post-image::after {
-        width: 100%;
+        width: 110%;
         height: 40%;
         top: auto;
         bottom: 0;
         right: 0;
         left: 0;
-        transform: rotateZ(2deg) translate(0%, 50%);
+        transform: rotateZ(2deg) translate(-5%, 50%);
     }
     body:not(.post-template) .post:nth-child(odd) .post-image {
         right: 0;
         left: 0;
+        border-radius: 5px 5px 0 0;
     }
     body:not(.post-template) .post:nth-child(odd) .post-image::after {
         right: 0;
         left: 0;
-        transform: rotateZ(-2deg) translate(0%, 50%);
+        transform: rotateZ(-2deg) translate(-5%, 50%);
     }
 
     body:not(.post-template) .post-header,
@@ -2341,11 +2349,11 @@ body:not(.post-template) .post:nth-child(odd) .post-meta {
     body:not(.post-template) .post:nth-child(odd) .post-header,
     body:not(.post-template) .post:nth-child(odd) .post-excerpt,
     body:not(.post-template) .post:nth-child(odd) .post-meta {
-        margin-right: 0;
-        margin-left: 0;
+        margin-right: 20px;
+        margin-left: 20px;
     }
 
     body:not(.post-template) .post-header {
-        padding-top: 50px;
+        padding-top: 100px;
     }
 }
